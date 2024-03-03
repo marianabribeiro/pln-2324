@@ -1,0 +1,27 @@
+body {
+    background-color: #99ccff;
+}
+
+h3 {
+    color: #0066ff;
+    text-align: center;
+}
+
+p {
+    color: #336699;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    color: black;
+    padding: 10px;
+}
+
+th {
+    color: #0070cc5d;
+    background-color: black;
+}
