@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond, serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 400px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slideshow-container {
+  max-width: 58%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.slideshow-container img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.footer {
+  background-color:#ffcea7;;
+  padding: 10px;
+  text-align: center;
+}
+.header {
+  background-color: #F3DDCB;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="aboutme.html">About Me</a>
+      </div>
+
+<div id="main">
+  <div class="header">
+    <h2>My Hobbies</h2>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+
+<div class="row">
+  <div class="column" style="background-color:#E9B079; text-align: center;"><h3><b>Ler</b></h3>
+  <p> Desde géneros como romance e fantasia até murder mystery e whudunnit</p>
+    <div class="slideshow-container" id="slideshow1">
+      <div class="mySlides fade">
+        <img src="Imagens/livro1.jpg" alt="Image 4">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro2.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro3.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro4.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro5.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro6.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro7.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro8.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro9.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro10.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/livro11.jpg" alt="Image 5">
+      </div>
+
+    </div>
+  
+  </div>
+  
+  <div class="column" style="background-color:#D2793B; text-align: center;"><h3><b>Viajar</b></h3>
+    <p> Explorar o mundo, conhecer novas cidades, culturas e pessoas e fazer memórias de experiências incrivéis </p>
+
+    <div class="slideshow-container" id="slideshow2">
+      <div class="mySlides fade">
+        <img src="Imagens/viaj1.jpg" alt="Image 4">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/viaj2.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/viaj3.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/viaj4.jpg" alt="Image 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="Imagens/viaj6.jpg" alt="Image 5">
+      </div>
+  
+  </div>
+
+  
+</div>
+
+<div class="column" style="background-color:#E9B079; text-align: center;"><h3><b>Voluntariado</b></h3>
+  <p> Descobrir a alegria de dedicar tempo e energia às causas que fazem a diferença </p>
+<div class="slideshow-container" id="slideshow3">
+  <div class="mySlides fade">
+    <img src="Imagens/volunt3.jpg" alt="Image 4">
+  </div>
+  <div class="mySlides fade">
+    <img src="Imagens/volunt4.jpg" alt="Image 4">
+  </div>
+  <div class="mySlides fade">
+    <img src="Imagens/volunt5.jpg" alt="Image 4">
+  </div>
+</div>
+ 
+</div>
+</div>
+
+<div class="footer">
+   <p>Descobre mais sobre mim na 
+   secção <a href="aboutme.html">About Me</a></p>
+</div>
+</div>
+
+<script>
+  var slideIndex1 = 0;
+  var slideIndex2 = 0;
+  showSlides('slideshow1');
+  showSlides('slideshow2');
+  showSlides('slideshow3');
+
+  function showSlides(slideshowId) {
+    var i;
+    var slides = document.getElementById(slideshowId).getElementsByClassName("mySlides");
+    var slideIndex = 0;
+
+    setInterval(function() {
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";
+    }, 3000);
+  }
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+</body>
+</html>
+
+
