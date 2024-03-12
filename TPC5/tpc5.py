@@ -45,9 +45,16 @@ texto=re.sub(r'\f', '<hr>', texto)
 
 file_out=open(r"C:\Users\Mariana Ribeiro\Desktop\ProcLingNat\pln-2324\TPC5\livro.html", "w", encoding='utf-8')
 file_out.write(texto)
+file_out.close()
 
 file_out2=open(r"C:\Users\Mariana Ribeiro\Desktop\ProcLingNat\pln-2324\TPC5\conceitosTrad.json", 'w')
 json.dump(conceitos_min, file_out2, indent=4, ensure_ascii=False)
+file_out2.close()
 
 file_out3=open(r"C:\Users\Mariana Ribeiro\Desktop\ProcLingNat\pln-2324\TPC5\dic_Trad.json", 'w')
 json.dump(dictrad, file_out3, indent=4, ensure_ascii=False)
+file_out3.close()
+
+file_conceitos.close()
+file_livro.close()
+file_traduzidos.close()
