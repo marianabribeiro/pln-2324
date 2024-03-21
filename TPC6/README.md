@@ -1,8 +1,8 @@
-# TPC5
+# TPC6
 
 Processamento de Linguagem Natural - 4º ano Informática Médica
 
-O objetivo do TPC5 foi o melhoramento da página html desenvolvida na aula que permitisse a visualização da descrição de cada conceito numa página html à parte.
+O objetivo do TPC6 foi o melhoramento da página html desenvolvida na aula que permitisse a visualização da descrição de cada conceito numa página html à parte.
 
 ![alt text](image.png)
 ![alt text](image-1.png)
