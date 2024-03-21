@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="list-group">
+    {% for conceito in conceitos %}
+    <a href="{{ url_for('consultar_Conceitos', designacao=conceito) }}" class="list-group-item list-group-item-action">{{ conceito }}</a>
+    
+    {% endfor %}
+</div>
+{% endblock %}
