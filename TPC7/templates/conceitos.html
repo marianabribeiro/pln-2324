@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div>
+  <section id="adicionar">
+
+<div class="card my-5 mx-5" >
+        <div class="card-header">
+          <b> Adicionar Conceito </b>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <form action="/adicionar_conceito" method="POST">
+                <div class="form-group">
+                  <label for="INPUTconceito">Conceito</label>
+                  <input type="text" class="form-control" id="INPUTconceito" name="conceito">
+                </div>
+                <div class="form-group">
+                    <label for="INPUTdescricao">Descricao</label>
+                    <input type="text" class="form-control" id="INPUTdescricao" name="descricao">
+                </div>
+                <div class="form-group">
+                    <label for="INPUTtraducao">Tradução Inglês </label>
+                    <input type="text" class="form-control" id="INPUTtraducao" name="traducaoEN">
+                </div>
+                <button type="submit" class="btn btn-outline-secondary mt-2 me-2">Adicionar</button>
+            </form>
+          </blockquote>
+        </div>
+    </div>
+
+  </section>
+    
+</div>
+
+<hr>
+
+<div>
+
+  <section id="pesquisar">
+    <div class="card my-5 mx-5">
+      <div class="card-header">
+        <b> Procurar informação </b>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <form action="/pesquisar_conceito" method="POST">
+            <input class="form-control mr-sm-2" type="search" name="info" aria-label="Search">
+            <button type="submit" class="btn btn-outline-secondary mt-2 me-2">Procurar</button>
+          </form>
+          <div id="info">
+            
+              {% if resultados %}
+                  <h2>Resultados da pesquisa para " {{ palavra }}":</h2>
+                  <ul>
+                      {% for resultado in resultados %}
+                          <li><b>{{ resultado.conceito }}</b> - {{ resultado.descricao }}</li>
+                          <hr>
+                          {% endfor %}
+
+                  </ul>
+                
+                {% elif palavra %}  
+                 
+                  <p>Não há informações para "{{ palavra }}".</p>
+                {% endif %}
+        
+            
+        </div>
+        </blockquote>
+      </div>
+  </div>
+  </section>
+  
+</div>
+
+<hr>
+
+<section id="conceitos">
+  <div class="list-group mt-5">
+    {% for conceito in conceitos %}
+    <a href="/conceitos/{{conceito}}" class="list-group-item list-group-item-action">{{ conceito }}</a>
+    
+    {% endfor %}
+</div>
+
+</section>
+
+
+
+{% endblock %}
